@@ -1,7 +1,3 @@
-# 此项目无限期停止维护。NO LONGER SUPPORT。
-
-Pleases Fork this project and modify for yourself.
-
 ---
 
 Aria2 with webui
