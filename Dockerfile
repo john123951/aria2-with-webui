@@ -6,7 +6,7 @@ RUN apk update && \
 	apk add --no-cache --update bash && \
 	mkdir -p /conf && \
 	mkdir -p /conf-copy && \
-	mkdir -p /data && \
+	mkdir -p /download && \
 	apk add --no-cache --update aria2 && \
 	apk add git && \
 	git clone https://github.com/ziahamza/webui-aria2 /aria2-webui && \
@@ -21,7 +21,7 @@ ADD files/on-complete.sh /conf-copy/on-complete.sh
 RUN chmod +x /conf-copy/start.sh
 
 WORKDIR /
-VOLUME ["/data"]
+VOLUME ["/download"]
 VOLUME ["/conf"]
 EXPOSE 6800
 EXPOSE 80

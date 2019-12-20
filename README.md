@@ -14,7 +14,7 @@ docker run -d \
 --name aria2-with-webui \
 -p 6800:6800 \
 -p 6880:80 \
--v /DOWNLOAD_DIR:/data \
+-v /DOWNLOAD_DIR:/download \
 -v /CONFIG_DIR:/conf \
 -e SECRET=YOUR_SECRET_CODE \
 xujinkai/aria2-with-webui
@@ -37,7 +37,7 @@ services:
     environment:
       SECRET: YOUR_SECRET_CODE
     volumes:
-      - /DOWNLOAD_DIR:/data:rw
+      - /DOWNLOAD_DIR:/download:rw
       - aria2-conf:/conf
 
 volumes:
